@@ -5,7 +5,9 @@ function Memorias() {
   return (
     <div>
         <ThemeProvider>
-        <LayoutSidebar children={undefined} />
+        <LayoutSidebar>
+          a
+        </LayoutSidebar>
           
         </ThemeProvider>
     </div>
