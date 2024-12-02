@@ -82,3 +82,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: "jsmath-cmmi10";
+  src: url("src/fonts/jsmath-cmmi10.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

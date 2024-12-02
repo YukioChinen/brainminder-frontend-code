@@ -4,6 +4,8 @@ import Memorias from '@/pages/Memorias';
 import Configuracoes from './pages/Configuracoes';
 import Usuarios from './pages/Usuarios';
 import Relatorios from './pages/Relatorios';
+import Login from './pages/Login';
+import Registrar from './pages/Registrar';
 
 function App() {
   return (
@@ -11,11 +13,12 @@ function App() {
       <Router>
         <ThemeProvider>
           <Routes>
-          <Route path="home" element={<Memorias />} /> {/* Página padrão */}
+            <Route path='login' element={<Login />} />
             <Route path="configuracoes" element={<Configuracoes />} />  {/* Rota para a página de Configurações */}
             <Route path="usuarios" element={<Usuarios />} />  {/* Rota para a página de Usuários */}
             <Route path="memorias" element={<Memorias />} />  {/* Rota para a página de Memórias */}
             <Route path="relatorios" element={<Relatorios />} />  {/* Rota para a página de Relatórios */}
+            <Route path="registrar" element={<Registrar />} />
           </Routes>
           
         </ThemeProvider>
