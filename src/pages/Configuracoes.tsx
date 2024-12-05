@@ -39,47 +39,50 @@ function Memorias() {
     <div>
         <ThemeProvider>
           <LayoutSidebar>
-            <div className="size-max flex flex-col items-center justify-center">
-              <div>
-                <Avatar className="size-44"> 
-                  <AvatarImage src="https://github.com/shadcn.png" />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-                <div className="flex-center p-2">
-                  <ButtonOutline/>
-                </div>
-              </div>
-              <div className="p-2">
-                Nome:
-                <InputNome />
-              </div>
-              <div className="p-2">
-                Email:
-                <InputEmail />
-              </div>
-              <div className="p-2">
-                CPF:
-                <InputCPF />
-              </div>
-              <div className="p-2">
-                Telefone:
-                <InputTel />
-              </div>
-              <div className="p-2">
-                Senha:
-                <InputSenha/>
-              </div>
-              <div className="p-2 flex">
-                <div className="p-2">
-                  <Button>Alterar</Button>
+            <div>
+              <div className="size-max flex flex-col items-center justify-center">
+                <div>
+                  <Avatar className="size-44"> 
+                    <AvatarImage src="https://github.com/shadcn.png" />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                  <div className="flex-center p-2">
+                    <ButtonOutline/>
+                  </div>
                 </div>
                 <div className="p-2">
-                  <ButtonSecondary/>
+                  Nome:
+                  <InputNome />
+                </div>
+                <div className="p-2">
+                  Email:
+                  <InputEmail />
+                </div>
+                <div className="p-2">
+                  CPF:
+                  <InputCPF />
+                </div>
+                <div className="p-2">
+                  Telefone:
+                  <InputTel />
+                </div>
+                <div className="p-2">
+                  Senha:
+                  <InputSenha/>
+                </div>
+                <div className="p-2 flex">
+                  <div className="p-2">
+                    <Button>Alterar</Button>
+                  </div>
+                  <div className="p-2">
+                    <ButtonSecondary/>
+                  </div>
+                  
                 </div>
                 
               </div>
-              
             </div>
+            
           
 
 

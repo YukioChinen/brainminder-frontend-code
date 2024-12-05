@@ -4,11 +4,6 @@ import { Button } from "@/components/ui/button"
 import logo from "@/images/logo.svg"
 import { Link } from "react-router-dom";
 
-export function ButtonOutline() {
-  return <Button variant="outline" className="w-full px-4 py-2 mt-4 text-white rounded-lg">Login</Button>
-}
-
-
 export function InputEmail() {
     return <Input type="email" placeholder="Email" />
   }
@@ -41,7 +36,7 @@ export function InputSenha() {
                   className="text-black w-full px-4 py-2 mt-1 text-sm border rounded-lg focus:ring-blue-500 focus:border-blue-500 border-gray-300"
                   placeholder="Digite sua senha" required/>
               </div>
-              <ButtonOutline/>
+              <Button className="w-full px-4 py-2 mt-4 text-white rounded-lg">Login</Button>
             </form>
             <div className="flex flex-col items-center justify-center mt-20">
               <img src={logo} alt="Logo" className="size-24" />

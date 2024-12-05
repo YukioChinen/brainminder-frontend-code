@@ -4,17 +4,6 @@ import { Button } from "@/components/ui/button";
 import logo from "@/images/logo.svg";
 import { Link } from "react-router-dom";
 
-export function ButtonOutline() {
-  return (
-    <Button
-      variant="outline"
-      className="w-full px-4 py-2 mt-4 text-white rounded-lg"
-    >
-      Registrar
-    </Button>
-  );
-}
-
 export function InputField({ type, placeholder, id }: { type: string; placeholder: string; id: string }) {
   return <Input type={type} placeholder={placeholder} id={id} />;
 }
@@ -58,7 +47,7 @@ function Registrar() {
               </label>
               <InputField type="password" placeholder="Digite sua senha" id="password" />
             </div>
-            <ButtonOutline />
+            <Button className="w-full px-4 py-2 mt-4 text-white rounded-lg">Registrar</Button>
           </form>
           <div className="flex flex-col items-center justify-center mt-20">
             <img src={logo} alt="Logo" className="size-24" />

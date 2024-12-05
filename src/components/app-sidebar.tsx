@@ -18,22 +18,22 @@ const data = {
   navSecondary: [
     {
       title: "Configurações",
-      url: "configuracoes",
+      url: "/configuracoes",
       icon: Settings2,
     },
     {
       title: "Usuários",
-      url: "usuarios",
+      url: "/usuarios",
       icon: User,
     },
     {
       title: "Memórias",
-      url: "memorias",
+      url: "/memorias",
       icon: Folder,
     },
     {
       title: "Relatórios",
-      url: "relatorios",
+      url: "/relatorios",
       icon: ScrollText,
     }
   ],

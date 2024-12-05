@@ -6,26 +6,28 @@ import Usuarios from './pages/Usuarios';
 import Relatorios from './pages/Relatorios';
 import Login from './pages/Login';
 import Registrar from './pages/Registrar';
+import EditarUsuario from './pages/EditarUsuario';
 
 function App() {
   return (
-    <div>
-      <Router>
-        <ThemeProvider>
-          <Routes>
-            <Route path='login' element={<Login />} />
-            <Route path="configuracoes" element={<Configuracoes />} />  {/* Rota para a página de Configurações */}
-            <Route path="usuarios" element={<Usuarios />} />  {/* Rota para a página de Usuários */}
-            <Route path="memorias" element={<Memorias />} />  {/* Rota para a página de Memórias */}
-            <Route path="relatorios" element={<Relatorios />} />  {/* Rota para a página de Relatórios */}
-            <Route path="registrar" element={<Registrar />} />
-          </Routes>
-          
-        </ThemeProvider>
+    <Router>
+      <ThemeProvider>
+        <Routes>
+          {/* Rota padrão para Login */}
+          <Route path="/" element={<Login />} />
 
-      </Router>
-    </div>
-    
+          {/* Rota para outras páginas */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/configuracoes" element={<Configuracoes />} />
+          <Route path="/usuarios" element={<Usuarios />} />
+          {/* Rota para edição de usuário dentro de /usuarios */}
+          <Route path="/usuarios/editar/:userId" element={<EditarUsuario />} />
+          <Route path="/memorias" element={<Memorias />} />
+          <Route path="/relatorios" element={<Relatorios />} />
+          <Route path="/registrar" element={<Registrar />} />
+        </Routes>
+      </ThemeProvider>
+    </Router>
   );
 }
 
