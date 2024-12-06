@@ -2,27 +2,9 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import LayoutSidebar from "@/apps/layoutSidebar";
 import { ThemeProvider } from "@/components/theme-provider";
+import { api } from '@/components/api';
 
-const users = [
-  {
-    id: 1,
-    firstName: "Thiago",
-    lastName: "Araujo",
-    cpf: "123456789"
-  },
-  {
-    id: 2,
-    firstName: "Ryan",
-    lastName: "Ribeiro",
-    cpf: "987654321"
-  },
-  {
-    id: 3,
-    firstName: "Enzo",
-    lastName: "Chinen",
-    cpf: "123789456"
-  }
-];
+const users = await api.get("/users") as any;
 
 function EditarUsuario() {
   const { userId } = useParams();
@@ -30,7 +12,7 @@ function EditarUsuario() {
 
   useEffect(() => {
     // Simula o carregamento dos dados do usuário (aqui você pode usar uma API ou uma função para buscar os dados reais)
-    const selectedUser = users.find(u => u.id === parseInt(userId!));
+    const selectedUser = users.find((u: { id: number; }) => u.id === parseInt(userId!));
     setUser(selectedUser);
   }, [userId]);
 
