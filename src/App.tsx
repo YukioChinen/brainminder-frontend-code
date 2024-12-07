@@ -7,6 +7,10 @@ import Relatorios from './pages/Relatorios';
 import Login from './pages/Login';
 import Registrar from './pages/Registrar';
 import EditarUsuario from './pages/EditarUsuario';
+import AdicionarUsuario from './pages/AdicionarUsuario';
+import AdicionarMemorias from './pages/AdicionarMemorias';
+import DetalhesMemorias from './pages/DetalhesMemorias';
+import EditarMemorias from './pages/EditarMemorias';
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
           <Route path="/memorias" element={<Memorias />} />
           <Route path="/relatorios" element={<Relatorios />} />
           <Route path="/registrar" element={<Registrar />} />
+          <Route path="/usuarios/adicionar" element={<AdicionarUsuario />}/>
+          <Route path="/memorias/adicionar" element={<AdicionarMemorias />}/>
+          <Route path="/memorias/detalhes/:id" element={<DetalhesMemorias />}/>
+          <Route path="/memorias/editar/:id" element={<EditarMemorias />}/>
         </Routes>
       </ThemeProvider>
     </Router>
